@@ -1,0 +1,22 @@
+.column{
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+.row::after{
+    content: "";
+  clear: both;
+  display: table;
+}
+
+.fullSize
+{
+  width:100%
+}
+
+
+body{
+
+  background-color: #EEECE1;
+}
