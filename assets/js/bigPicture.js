@@ -1,10 +1,9 @@
 function initializeModal() {
-  console.log("I ran")
   // Get the modal
   var modal = document.getElementById('myModal');
 
   // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var img = document.getElementById('myImg');
+  var img = /** @type {HTMLImageElement} */document.getElementById('myImg');
   var modalImg = document.getElementById("img01");
   var captionText = document.getElementById("caption");
 
@@ -15,7 +14,7 @@ function initializeModal() {
   }
 
   // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+  var span = /** @type {HTMLInputElement} */document.getElementsByClassName("close")[0];
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
