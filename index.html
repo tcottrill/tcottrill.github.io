@@ -46,7 +46,7 @@
 <body><header class="site-header" role="banner">
 
   <div class="wrapper">
-    
+
     <a class="site-title" rel="author" href="index.html">AAE (Another Arcade Emulator)</a><nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
@@ -59,51 +59,51 @@
       </label>
 
       <div class="trigger">
-        <!--<a class="page-link" href="/about.html">About</a><a class="page-link" href="/blog.html">Blog</a><a class="page-link" href="/downloads.html">Downloads</a><a class="page-link" href="/faq.html">F.A.Q</a>-->
+        <!--<a class="page-link" href="/about.html">About</a><a class="page-link" href="/blog.html">Blog</a><a class="page-link" href="/downloads.html">Downloads</a><a class="page-link" href="/faq.html">FAQ</a>-->
         <a class="page-link" href="about.html">About</a>
         <a class="page-link" href="blog.html">Blog</a>
         <a class="page-link" href="downloads.html">Downloads</a>
-        <a class="page-link" href="faq.html">F.A.Q</a>
+        <a class="page-link" href="faq.html">FAQ</a>
       </div>
 
     </nav></div>
 </header>
-<main class="page-content" aria-label="Content">
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+
+  <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <h1 id="screenshots">SCREENSHOTS</h1>
 
 <div class="row">
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/asteroids.webp" class="fullSize screenShot" alt="Asteroids" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/astdxblur.webp" class="fullSize screenShot" alt="Asteroids Deluxe (with phosphor persistence)" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/landertest.webp" class="fullSize screenShot " alt="Lunar Lander" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/tempestm.webp" class="fullSize screenShot" alt="Clay Cowgill's MultiTempest" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/sduelblur.webp" class="fullSize screenShot" alt="Space Duel" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/solarqblur.webp" class="fullSize screenShot" alt="Solar Quest" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/ripoff.webp" class="fullSize screenShot " alt="RipOff" />
   </div>
-  <div class="column">
+  <div class="column quarterWidth">
     <img src="assets/img/gui.webp" class="fullSize screenShot" alt="Embedded Frontend" />
   </div>
-</div>
-
-<p><!-- The Modal --></p>
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01" />
-  <div id="caption"></div>
 </div>
 
 <h2 id="usage">USAGE</h2>
@@ -117,33 +117,6 @@
 <p>Wells D9200 Owners should set the program to 800x600,  no bezel artwork for best results.</p>
 
 <p>HIT &lt;TAB&gt; in the GUI or in-game to access the menu system. All settings are done there. ALL SYSTEM WIDE SETTINGS NEED TO BE SET BY RUNNING THE BUILT-IN GUI.</p>
-
-<script>
-  // Get the modal
-  var modal = document.getElementById('myModal');
-
-  // Get the image and insert it inside the modal - use its "alt" text as a caption
-  var images = document.getElementsByClassName('screenShot');
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
-  for(var i = 0 ; i < images.length; i++)
-  {
-    var img = images[i];
-    img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
-  }
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-</script>
 
 
     </div>
@@ -181,6 +154,32 @@
     crossorigin="anonymous"></script>
   <script src="./assets/js/filePath.js"></script>
 </footer>
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var images = document.getElementsByClassName('screenShot');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for (var i = 0; i < images.length; i++) {
+      var img = images[i];
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
 </body>
 
 </html>

@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>F.A.Q | AAE (Another Arcade Emulator)</title>
+<title>FAQ | AAE (Another Arcade Emulator)</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="F.A.Q" />
+<meta property="og:title" content="FAQ" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL." />
 <meta property="og:description" content="AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL." />
@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="AAE (Another Arcade Emulator)" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="F.A.Q" />
+<meta property="twitter:title" content="FAQ" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL.","headline":"F.A.Q","url":"http://localhost:4000/faq.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL.","headline":"FAQ","url":"http://localhost:4000/faq.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="AAE (Another Arcade Emulator)" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>F.A.Q | AAE (Another Arcade Emulator)</title>
+<title>FAQ | AAE (Another Arcade Emulator)</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="F.A.Q" />
+<meta property="og:title" content="FAQ" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL." />
 <meta property="og:description" content="AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL." />
@@ -31,9 +31,9 @@
 <meta property="og:site_name" content="AAE (Another Arcade Emulator)" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="F.A.Q" />
+<meta property="twitter:title" content="FAQ" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL.","headline":"F.A.Q","url":"http://localhost:4000/faq.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AAE is a primarily vector based arcade system emulator/simulator written using C and OpenGL.","headline":"FAQ","url":"http://localhost:4000/faq.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -46,7 +46,7 @@
 <body><header class="site-header" role="banner">
 
   <div class="wrapper">
-    
+
     <a class="site-title" rel="author" href="index.html">AAE (Another Arcade Emulator)</a><nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
@@ -59,21 +59,28 @@
       </label>
 
       <div class="trigger">
-        <!--<a class="page-link" href="/about.html">About</a><a class="page-link" href="/blog.html">Blog</a><a class="page-link" href="/downloads.html">Downloads</a><a class="page-link" href="/faq.html">F.A.Q</a>-->
+        <!--<a class="page-link" href="/about.html">About</a><a class="page-link" href="/blog.html">Blog</a><a class="page-link" href="/downloads.html">Downloads</a><a class="page-link" href="/faq.html">FAQ</a>-->
         <a class="page-link" href="about.html">About</a>
         <a class="page-link" href="blog.html">Blog</a>
         <a class="page-link" href="downloads.html">Downloads</a>
-        <a class="page-link" href="faq.html">F.A.Q</a>
+        <a class="page-link" href="faq.html">FAQ</a>
       </div>
 
     </nav></div>
 </header>
-<main class="page-content" aria-label="Content">
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+
+  <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">F.A.Q</h1>
+    <h1 class="post-title">FAQ</h1>
   </header>
 
   <div class="post-content">
@@ -118,6 +125,32 @@
     crossorigin="anonymous"></script>
   <script src="./assets/js/filePath.js"></script>
 </footer>
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var images = document.getElementsByClassName('screenShot');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    for (var i = 0; i < images.length; i++) {
+      var img = images[i];
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
 </body>
 
 </html>
